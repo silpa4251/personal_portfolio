@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaLaptopCode, FaUserAlt, FaAward } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import resumePDF from "../assets/SILPA DAS N.pdf";
 
 const About = () => {
   // Animation variants
@@ -117,7 +118,7 @@ const About = () => {
               </div>
               
               <motion.a
-                href="../assets/SILPA DAS N.pdf"
+                href={resumePDF}
                 download="Silpa_Das_N_Resume.pdf"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

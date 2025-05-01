@@ -15,8 +15,18 @@ const Footer = () => {
     <footer className="bg-gradient-to-r from-slate-900 to-slate-800 border-t border-blue-900/20 py-10">
       <div className="container mx-auto px-6">
         {/* Social links with elegant styling */}
-          <div className=' bg-amber-700'>
-        <div className="flex justify-end mb-8">
+          <div className='flex flex-col justify-center items-center gap-6 mb-8'>
+        
+        {/* Navigation links with refined styling */}
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
+          <a href="/" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Home</a>
+          <a href="/about" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">About</a>
+          <a href="/projects" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Projects</a>
+          <a href="/skills" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Skills</a>
+          <a href="/contact" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Contact</a>
+        </div>
+
+        <div className="flex space-x-6">
           {socialLinks.map((link) => (
             <a
               key={link.name}
@@ -30,15 +40,7 @@ const Footer = () => {
             </a>
           ))}
         </div>
-        
-        {/* Navigation links with refined styling */}
-        <div className="flex justify-start flex-wrap gap-x-10 gap-y-3 mb-8">
-          <a href="/" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Home</a>
-          <a href="/about" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">About</a>
-          <a href="/projects" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Projects</a>
-          <a href="/skills" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Skills</a>
-          <a href="/contact" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Contact</a>
-        </div>
+
         </div>
         
         {/* Decorative divider */}
