@@ -71,8 +71,16 @@ const About = () => {
                   <span className="font-medium">Silpa Das N</span>
                 </li>
                 <li className="flex flex-col">
+                  <span className="text-gray-400 text-sm">Position</span>
+                  <span className="font-medium">MERN Stack Developer</span>
+                </li>
+                   <li className="flex flex-col">
                   <span className="text-gray-400 text-sm">Email</span>
                   <span className="font-medium">silpadas4251@gmail.com</span>
+                </li>
+                   <li className="flex flex-col">
+                  <span className="text-gray-400 text-sm">Contact</span>
+                  <span className="font-medium">+91 9961158293</span>
                 </li>
                 <li className="flex flex-col">
                   <span className="text-gray-400 text-sm">Location</span>
@@ -83,39 +91,6 @@ const About = () => {
                   <span className="font-medium">Full-time / Freelance</span>
                 </li>
               </ul>
-              
-              <div className="mt-8">
-                <h3 className="text-lg font-medium mb-3">Languages</h3>
-                <div className="space-y-3">
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm">English</span>
-                      <span className="text-sm text-gray-400">90%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-1.5">
-                      <div className="bg-violet-500 h-1.5 rounded-full" style={{ width: '90%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm">Malayalam</span>
-                      <span className="text-sm text-gray-400">100%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-1.5">
-                      <div className="bg-violet-500 h-1.5 rounded-full" style={{ width: '100%' }}></div>
-                    </div>
-                  </div>
-                  <div>
-                    <div className="flex justify-between mb-1">
-                      <span className="text-sm">Hindi</span>
-                      <span className="text-sm text-gray-400">50%</span>
-                    </div>
-                    <div className="w-full bg-gray-700 rounded-full h-1.5">
-                      <div className="bg-violet-500 h-1.5 rounded-full" style={{ width: '50%' }}></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               
               <motion.a
                 href={resumePDF}
@@ -206,89 +181,6 @@ const About = () => {
                   </div>
                 </div>
               </motion.div>
-            </motion.div>
-            
-            {/* Skills section */}
-            <motion.div 
-              variants={itemVariants}
-              className="bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-sm p-6 rounded-xl border border-gray-800 shadow-xl"
-            >
-              <div className="flex items-center mb-6">
-                <div className="p-3 rounded-lg bg-green-600 bg-opacity-20 mr-4">
-                  <FaAward className="text-green-400 text-xl" />
-                </div>
-                <h2 className="text-xl font-semibold">Skills</h2>
-              </div>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4">
-                {/* Frontend */}
-                <div>
-                  <h3 className="text-lg font-medium mb-3">Frontend</h3>
-                  <div className="space-y-3">
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm">React.js</span>
-                        <span className="text-sm text-gray-400">70%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-1.5">
-                        <div className="bg-blue-500 h-1.5 rounded-full" style={{ width: '70%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm">JavaScript</span>
-                        <span className="text-sm text-gray-400">85%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-1.5">
-                        <div className="bg-blue-500 h-1.5 rounded-full" style={{ width: '85%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm">Tailwind CSS</span>
-                        <span className="text-sm text-gray-400">75%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-1.5">
-                        <div className="bg-blue-500 h-1.5 rounded-full" style={{ width: '75%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Backend */}
-                <div>
-                  <h3 className="text-lg font-medium mb-3">Backend</h3>
-                  <div className="space-y-3">
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm">Node.js</span>
-                        <span className="text-sm text-gray-400">85%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-1.5">
-                        <div className="bg-green-500 h-1.5 rounded-full" style={{ width: '85%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm">Express.js</span>
-                        <span className="text-sm text-gray-400">80%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-1.5">
-                        <div className="bg-green-500 h-1.5 rounded-full" style={{ width: '80%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm">MongoDB</span>
-                        <span className="text-sm text-gray-400">75%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-1.5">
-                        <div className="bg-green-500 h-1.5 rounded-full" style={{ width: '75%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </motion.div>
           </motion.div>
         </div>

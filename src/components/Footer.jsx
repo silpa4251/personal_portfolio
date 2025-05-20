@@ -21,8 +21,8 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center gap-x-8 gap-y-4">
           <a href="/" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Home</a>
           <a href="/about" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">About</a>
-          <a href="/projects" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Projects</a>
           <a href="/skills" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Skills</a>
+          <a href="/projects" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Projects</a>
           <a href="/contact" className="text-slate-300 hover:text-blue-400 transition-colors text-sm tracking-wide uppercase font-medium">Contact</a>
         </div>
 

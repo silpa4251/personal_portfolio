@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import project1 from "../assets/project1.png";
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiTailwindcss, SiFirebase, SiReact, SiNodedotjs } from 'react-icons/si';
 
@@ -29,24 +30,25 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "DevConnect",
-      description: "A full-featured social platform for developers to showcase their work, connect with others, and collaborate on projects.",
-      fullDescription: "A full-featured social platform for developers to showcase their work, connect with others, and collaborate on projects. Features include user profiles, project showcase, messaging, and community forums.",
-      image: "/api/placeholder/800/500",
-      demoLink: "https://dev-connect.example.com",
-      githubLink: "https://github.com/username/dev-connect",
-      technologies: ["react", "node", "express", "mongodb", "tailwind"],
+      title: "Intellecta",
+      description: "Intellcta is an AI-powered learning platform that delivers personalized, inclusive, and engaging education for students aged 5–18.",
+      fullDescription: "Intellcta is an AI-powered learning platform designed to personalize education for students aged 5–18. It features intelligent assessments, adaptive learning paths, gamified lessons, and a virtual AI tutor. The platform focuses on inclusivity with tailored support for kids with autism and aims to make learning engaging, accessible, and effective through modern technologies like VR and AI.",
+      image: project1,
+      githubLink: "https://github.com/silpa4251/intellecta",
+      technologies: ["react", "typescript", "node", "express", "mongodb", "tailwind", "AWS S3 bucket"],
       features: [
-        "User authentication with JWT",
-        "Real-time messaging with Socket.io",
-        "Project showcase with likes and comments",
-        "Community forums with markdown support",
-        "Responsive design for all devices"
+        "AI-Powered Personalized Learning",
+        "Initial Skill Assessment",
+        "Age & Difficulty-Based Content",
+        "Virtual AI Tutor",
+        "Interactive Lessons & quizes",
+        "Progress tracking",
+        "User Dashboard"
       ]
     },
     {
       id: 2,
-      title: "TaskMaster Pro",
+      title: "Fixmate",
       description: "A comprehensive task management application designed for individuals and teams.",
       fullDescription: "A comprehensive task management application designed for individuals and teams. TaskMaster Pro helps users organize tasks, track progress, and collaborate efficiently with an intuitive interface.",
       image: "/api/placeholder/800/500",
@@ -63,7 +65,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Weather Dashboard",
+      title: "Step Whisper - An E-Commerce site",
       description: "A modern weather application providing real-time weather data and forecasting.",
       fullDescription: "A modern weather application providing real-time weather data, forecasting, and location-based services with an elegant and intuitive user interface.",
       image: "/api/placeholder/800/500",
@@ -284,23 +286,6 @@ const Projects = () => {
             </div>
           </div>
         )}
-       
-        {/* CTA section */}
-        <div className="mt-20 text-center">
-          <div className="max-w-3xl mx-auto bg-gradient-to-r from-slate-800 to-slate-900 p-8 sm:p-10 rounded-xl border border-slate-700 shadow-lg">
-            <h3 className="text-2xl font-bold mb-4">Ready to collaborate?</h3>
-            <p className="text-slate-300 mb-8">
-              I'm always interested in new opportunities and exciting projects.
-              Let's discuss how we can work together to bring your ideas to life.
-            </p>
-            <a
-              href="/contact"
-              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded font-medium transition-colors"
-            >
-              Get In Touch
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
