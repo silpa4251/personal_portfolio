@@ -73,9 +73,10 @@ const Skills = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold mb-4 text-white">
-            My <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Skills</span>
+            <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+            My </span>Skills
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-400 to-violet-600 mx-auto"></div>
+          <div className="w-20 h-1 bg-gradient-to-r from-violet-400 to-violet-600 mx-auto"></div>
         </motion.div>
         
         {/* Category tabs */}
@@ -118,15 +119,11 @@ const Skills = () => {
             >
               <div className="h-full bg-gray-800 bg-opacity-70 rounded-xl p-5 border border-gray-700 shadow-lg hover:shadow-xl hover:border-violet-500 transition-all duration-300">
                 <div className="flex flex-col items-center justify-center text-center h-full">
-                  {/* Icon */}
                   <div className="text-3xl mb-3">
                     {skill.icon}
                   </div>
-                  
-                  {/* Name */}
-                  <h3 className="font-medium mb-2">{skill.name}</h3>
-                  
-                  {/* Description - only visible on larger screens */}
+        
+                  <h3 className="font-medium mb-2 text-white">{skill.name}</h3>
                   <p className="text-xs text-gray-400 hidden sm:block">
                     {skill.description}
                   </p>

@@ -114,10 +114,10 @@ const Contact = () => {
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
             Get In <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Touch</span>
           </h1>
-          {/* <div className="w-20 h-1 bg-gradient-to-r from-violet-500 to-violet-600 mx-auto"></div>
-          <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
+          <div className="w-20 h-1 bg-gradient-to-r from-violet-500 to-violet-600 mx-auto"></div>
+          {/* <p className="mt-4 text-gray-300 max-w-2xl mx-auto">
             Have a project in mind or want to collaborate? Feel free to reach out!
-          </p> */}
+          </p>  */}
         </motion.div>
         
         {/* Main content grid */}
@@ -237,7 +237,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
-                        placeholder="John Doe"
+                        placeholder="abc"
                       />
                     </div>
                     
@@ -254,7 +254,7 @@ const Contact = () => {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3 bg-gray-800 bg-opacity-50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 focus:border-transparent"
-                        placeholder="john@example.com"
+                        placeholder="abc@example.com"
                       />
                     </div>
                   </div>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import project1 from "../assets/project1.png";
+import project2 from "../assets/project2.png";
+import project3 from "../assets/project3.png";
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { SiMongodb, SiExpress, SiTailwindcss, SiFirebase, SiReact, SiNodedotjs } from 'react-icons/si';
+import { SiMongodb, SiExpress, SiTailwindcss, SiTypescript, SiReact, SiNodedotjs, SiAwsamplify } from 'react-icons/si';
 
 
 const Projects = () => {
@@ -9,24 +11,20 @@ const Projects = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [animateCards, setAnimateCards] = useState(false);
 
-
   useEffect(() => {
-    // Trigger animation after component mounts
     setTimeout(() => setAnimateCards(true), 100);
   }, []);
 
-
-  // Technology icons mapping
   const techIcons = {
     react: <SiReact className="text-cyan-500" />,
     node: <SiNodedotjs className="text-green-600" />,
     express: <SiExpress className="text-gray-400" />,
     mongodb: <SiMongodb className="text-green-500" />,
     tailwind: <SiTailwindcss className="text-blue-400" />,
-    firebase: <SiFirebase className="text-yellow-500" />
+    typescript: <SiTypescript className="text-blue-600" />,
+    AWS: <SiAwsamplify className='text-yellow-500' />
   };
  
-  // Project data - using your existing projects
   const projects = [
     {
       id: 1,
@@ -35,7 +33,7 @@ const Projects = () => {
       fullDescription: "Intellcta is an AI-powered learning platform designed to personalize education for students aged 5–18. It features intelligent assessments, adaptive learning paths, gamified lessons, and a virtual AI tutor. The platform focuses on inclusivity with tailored support for kids with autism and aims to make learning engaging, accessible, and effective through modern technologies like VR and AI.",
       image: project1,
       githubLink: "https://github.com/silpa4251/intellecta",
-      technologies: ["react", "typescript", "node", "express", "mongodb", "tailwind", "AWS S3 bucket"],
+      technologies: ["react", "typescript", "node", "express", "mongodb", "tailwind", "AWS"],
       features: [
         "AI-Powered Personalized Learning",
         "Initial Skill Assessment",
@@ -51,10 +49,10 @@ const Projects = () => {
       title: "Fixmate",
       description: "A comprehensive task management application designed for individuals and teams.",
       fullDescription: "A comprehensive task management application designed for individuals and teams. TaskMaster Pro helps users organize tasks, track progress, and collaborate efficiently with an intuitive interface.",
-      image: "/api/placeholder/800/500",
+      image: project2,
       demoLink: "https://taskmaster.example.com",
       githubLink: "https://github.com/username/taskmaster",
-      technologies: ["react", "node", "mongodb", "tailwind"],
+      technologies: ["react", "node", "express", "mongodb", "tailwind"],
       features: [
         "Drag-and-drop task organization",
         "Task filtering and priority management",
@@ -68,7 +66,7 @@ const Projects = () => {
       title: "Step Whisper - An E-Commerce site",
       description: "A modern weather application providing real-time weather data and forecasting.",
       fullDescription: "A modern weather application providing real-time weather data, forecasting, and location-based services with an elegant and intuitive user interface.",
-      image: "/api/placeholder/800/500",
+      image: project3,
       demoLink: "https://weather-app.example.com",
       githubLink: "https://github.com/username/weather-app",
       technologies: ["react", "tailwind"],
@@ -115,11 +113,9 @@ const Projects = () => {
 
   return (
     <section className="relative min-h-screen bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 px-4 sm:px-8">
-      {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="absolute w-full opacity-10">
-            {/* Grid pattern */}
             <div className="h-screen w-full"
                  style={{
                    backgroundImage: 'linear-gradient(to right, #4a5568 1px, transparent 1px), linear-gradient(to bottom, #4a5568 1px, transparent 1px)',
@@ -131,14 +127,11 @@ const Projects = () => {
       </div>
      
       <div className="container mx-auto relative z-10 max-w-7xl">
-        {/* Section heading */}
         <div className="text-center mb-16">
-          <h2 className="text-xl text-blue-400 font-mono uppercase tracking-wider mb-2">What I've Built</h2>
-          <h1 className="text-4xl md:text-5xl font-bold">Featured Projects</h1>
-          <div className="h-1 w-24 bg-blue-500 mx-auto mt-4"></div>
+          <h1 className="text-4xl md:text-5xl font-bold">Featured <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Projects</span></h1>
+          <div className="w-20 h-1 bg-gradient-to-r from-violet-500 to-violet-600 mx-auto mt-4"></div>
+
         </div>
-       
-        {/* Project cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div
