@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaGithub, FaInstagram } from 'react-icons/fa';
+import emailjs from 'emailjs-com';
+import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt, FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -34,22 +35,23 @@ const Contact = () => {
     
     // Simulate form submission with a timeout
     // Replace this with your actual form submission logic
-    setTimeout(() => {
+    emailjs.sendForm('service_8e050is', 'template_7sltl6c', e.target, '9tdBsVqee-p9iUq2E')
+    .then(() => {
       setFormStatus({
         submitted: true,
         success: true,
-        message: 'Thank you! Your message has been sent successfully.'
+        message: 'Message sent successfully!'
       });
-      setLoading(false);
-      // Reset form after successful submission
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    }, () => {
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: 'Failed to send message. Please try again later.'
       });
-    }, 1500);
-  };
+    })
+    .finally(() => setLoading(false));
+};
   
   // Contact info items
   const contactInfo = [
@@ -77,21 +79,21 @@ const Contact = () => {
   const socialLinks = [
     {
       icon: <FaLinkedin />,
-      url: "https://linkedin.com/in/yourprofile", 
+      url: "https://www.linkedin.com/in/silpadasn/", 
       label: "LinkedIn",
       color: "bg-blue-600"
     },
     {
       icon: <FaGithub />,
-      url: "https://github.com/yourusername", 
+      url: "https://github.com/silpa4251", 
       label: "GitHub",
       color: "bg-gray-800"
     },
     {
-      icon: <FaInstagram />,
-      url: "https://instagram.com/yourusername",
-      label: "Instagram",
-      color: "bg-pink-600"
+      icon: <FaWhatsapp />,
+      url: "https://wa.me/9961158293",
+      label: "Whatsapp",
+      color: "bg-green-500"
     }
   ];
 

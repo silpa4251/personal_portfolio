@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaLaptopCode, FaUserAlt, FaAward } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+
 import resumePDF from "../assets/SILPA DAS N.pdf";
+import { Link } from 'react-scroll';
 
 const About = () => {
   // Animation variants
@@ -193,7 +194,7 @@ const About = () => {
           className="mt-12 text-center"
         >
           <h3 className="text-xl font-medium mb-4">Interested in working together?</h3>
-          <Link to="/contact">
+          <Link to="contact" smooth={true} duration={500}>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

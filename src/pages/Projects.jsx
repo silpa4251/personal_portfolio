@@ -32,7 +32,7 @@ const Projects = () => {
       description: "Intellcta is an AI-powered learning platform that delivers personalized, inclusive, and engaging education for students aged 5–18.",
       fullDescription: "Intellcta is an AI-powered learning platform designed to personalize education for students aged 5–18. It features intelligent assessments, adaptive learning paths, gamified lessons, and a virtual AI tutor. The platform focuses on inclusivity with tailored support for kids with autism and aims to make learning engaging, accessible, and effective through modern technologies like VR and AI.",
       image: project1,
-      githubLink: "https://github.com/silpa4251/intellecta",
+      githubLink: "https://github.com/silpa4251/intellecta-client",
       technologies: ["react", "typescript", "node", "express", "mongodb", "tailwind", "AWS"],
       features: [
         "AI-Powered Personalized Learning",
@@ -47,54 +47,57 @@ const Projects = () => {
     {
       id: 2,
       title: "Fixmate",
-      description: "A comprehensive task management application designed for individuals and teams.",
-      fullDescription: "A comprehensive task management application designed for individuals and teams. TaskMaster Pro helps users organize tasks, track progress, and collaborate efficiently with an intuitive interface.",
+      description: "Fixmate is a location-based service booking platform that connects users with trusted service providers for home repairs, cleaning, and essential services, all in just a few clicks.",
+      fullDescription: "Fixmate is a full-featured MERN stack web application designed to simplify service booking by seamlessly connecting users with verified local service providers. Whether it’s a one-time plumbing issue or regular home cleaning, Fixmate offers an intuitive interface, real-time provider availability, and secure payments — making service booking faster, safer, and smarter.",
       image: project2,
       demoLink: "https://taskmaster.example.com",
-      githubLink: "https://github.com/username/taskmaster",
+      githubLink: "https://github.com/silpa4251/Fixmate",
       technologies: ["react", "node", "express", "mongodb", "tailwind"],
       features: [
-        "Drag-and-drop task organization",
-        "Task filtering and priority management",
-        "Calendar integration and reminders",
-        "Team collaboration features",
-        "Progress tracking and reporting"
+        "Location-based provider searching with live map",
+        "Single and Multiple days Service Booking",
+        "Secure online payments via Razorpay",
+        "Show availability based on provider schedules.",
+        "Users can view, reschedule, or cancel bookings easily.",
+        "Ratings & reviews system for service feedback",
+        "providers can confirm, complete or cancel the booking"
       ]
     },
     {
       id: 3,
       title: "Step Whisper - An E-Commerce site",
-      description: "A modern weather application providing real-time weather data and forecasting.",
-      fullDescription: "A modern weather application providing real-time weather data, forecasting, and location-based services with an elegant and intuitive user interface.",
+      description: "A modern, responsive shoe e-commerce platform for browsing, managing, and purchasing footwear with ease.",
+      fullDescription: "This shoe e-commerce website is a fully functional MERN stack application that allows users to explore, filter, and purchase a wide variety of footwear. With user authentication, admin controls, and a seamless shopping experience, the platform supports cart management, order placement, wishlists, and dynamic product updates.",
       image: project3,
       demoLink: "https://weather-app.example.com",
-      githubLink: "https://github.com/username/weather-app",
-      technologies: ["react", "tailwind"],
+      githubLink: "https://github.com/silpa4251/fullStack_shoe-ecommerce",
+      technologies: ["react","node", "express", "mongoDb", "tailwind"],
       features: [
-        "Real-time weather updates",
-        "7-day forecasting",
-        "Location-based services",
-        "Weather maps and radar",
-        "Customizable alerts and notifications"
+        "User login & registration",
+        "Product search & filtering",
+        "Add to cart & wishlist",
+        "Secure checkout & order placement",
+        "Admin dashboard for managing products, users & orders",
+        "Profile & address management"
       ]
     },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      description: "A modern, responsive portfolio website showcasing my skills and projects.",
-      fullDescription: "A modern, responsive portfolio website showcasing my skills, projects, and professional journey as a developer, built with React and Tailwind CSS.",
-      image: "/api/placeholder/800/500",
-      demoLink: "https://portfolio.example.com",
-      githubLink: "https://github.com/username/portfolio",
-      technologies: ["react", "tailwind"],
-      features: [
-        "Modern UI with smooth animations",
-        "Responsive design for all devices",
-        "Project showcase section",
-        "Skills and experience timeline",
-        "Contact form with form validation"
-      ]
-    }
+    // {
+    //   id: 4,
+    //   title: "Portfolio Website",
+    //   description: "A modern, responsive portfolio website showcasing my skills and projects.",
+    //   fullDescription: "A modern, responsive portfolio website showcasing my skills, projects, and professional journey as a developer, built with React and Tailwind CSS.",
+    //   image: "/api/placeholder/800/500",
+    //   demoLink: "https://portfolio.example.com",
+    //   githubLink: "https://github.com/username/portfolio",
+    //   technologies: ["react", "tailwind"],
+    //   features: [
+    //     "Modern UI with smooth animations",
+    //     "Responsive design for all devices",
+    //     "Project showcase section",
+    //     "Skills and experience timeline",
+    //     "Contact form with form validation"
+    //   ]
+    // }
   ];
 
 
@@ -128,11 +131,11 @@ const Projects = () => {
      
       <div className="container mx-auto relative z-10 max-w-7xl">
         <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold">Featured <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Projects</span></h1>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">Featured <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">Projects</span></h1>
           <div className="w-20 h-1 bg-gradient-to-r from-violet-500 to-violet-600 mx-auto mt-4"></div>
 
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={project.id}
@@ -201,7 +204,7 @@ const Projects = () => {
        
         {/* Project modal */}
         {isModalOpen && selectedProject && (
-          <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4">
+          <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 mt-16">
             <div
               className="bg-slate-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}

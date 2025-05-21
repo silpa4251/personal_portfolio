@@ -42,17 +42,17 @@ const Navbar = () => {
   return (
    <nav className="bg-white dark:bg-gray-800 shadow-md fixed top-0 w-full z-50">
       <div className="flex items-center justify-between px-4 py-3">
-      <div className="flex items-center">
+      <div className="flex items-center ml-12">
         <img
-          className="w-16 h-10 object-contain"
+          className="w-20 h-14 object-contain"
           src={logo}
           alt="Silpa Das N"
         />
       </div>
-      <ul className="hidden md:flex gap-7 mr-6 text-white">
+      <ul className="hidden md:flex gap-7 mr-12 text-white">
         {navLinks}
       </ul>
-       <div className="md:hidden text-white text-2xl" onClick={toggleNav}>
+       <div className="md:hidden text-white text-2xl mr-8" onClick={toggleNav}>
           {navOpen ? <FiX /> : <FiMenu />}
         </div>
       </div>

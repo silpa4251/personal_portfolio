@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaDatabase, FaGithub } from 'react-icons/fa';
 import { SiMongodb, SiTailwindcss, SiExpress } from 'react-icons/si';
-import { useNavigate } from 'react-router-dom';
 import profile from "../assets/propic.png";
 import resumePDF from "../assets/SILPA DAS N.pdf";
+import { Link } from 'react-scroll';
 
 const techIcons = [
   { icon: <FaReact className="text-cyan-500" />, name: "React" },
@@ -17,7 +17,6 @@ const techIcons = [
 ];
 
 const Hero = () => {
-  const navigate = useNavigate();
   
   return (
     <section className="mt-16 lg:mt-2 relative min-h-screen overflow-hidden bg-gradient-to-br from-black via-gray-900 to-indigo-950 text-white flex flex-col justify-center">
@@ -97,15 +96,16 @@ const Hero = () => {
               transition={{ delay: 1, duration: 0.8 }}
               className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 mt-8"
             >
+              <Link to="projects" smooth={true} duration={500} >
               <motion.button
-                onClick={() => navigate('/projects')}
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileTap={{ scale: 0.95 }}   
                 transition={{ type: 'spring', stiffness: 300 }}
                 className="bg-gradient-to-r from-violet-500 to-violet-600 text-white py-2 px-6 rounded-lg font-medium shadow-lg hover:shadow-violet-500/50 text-sm sm:text-base"
               >
                 View Projects
               </motion.button>
+            </Link>
               
               <motion.a
                 href={resumePDF}
