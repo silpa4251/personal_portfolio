@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import project1 from "../assets/project1.png";
 import project2 from "../assets/project2.png";
 import project3 from "../assets/project3.png";
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { SiMongodb, SiExpress, SiTailwindcss, SiTypescript, SiReact, SiNodedotjs, SiAwsamplify } from 'react-icons/si';
 
 
@@ -187,14 +187,14 @@ const Projects = () => {
                     >
                       <FaGithub size={20} />
                     </a>
-                    <a
+                    {/* <a
                       href={project.demoLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-slate-400 hover:text-white transition-colors"
                     >
                       <FaExternalLinkAlt size={18} />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </div>
@@ -261,14 +261,14 @@ const Projects = () => {
                
                 {/* Action buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <a
+                  {/* <a
                     href={selectedProject.demoLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded flex items-center justify-center gap-2 transition-colors"
                   >
                     <FaExternalLinkAlt /> View Live Demo
-                  </a>
+                  </a> */}
                   <a
                     href={selectedProject.githubLink}
                     target="_blank"
