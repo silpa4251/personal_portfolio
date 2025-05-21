@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { FaReact, FaJs, FaHtml5, FaCss3Alt, FaGitAlt, FaNodeJs, FaDatabase, FaServer } from 'react-icons/fa';
 import { SiTailwindcss, SiRedux, SiTypescript, SiMongodb, SiExpress, SiAwsamplify } from 'react-icons/si';
