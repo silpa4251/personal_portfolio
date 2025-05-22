@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/navlogo.png";
 import { Link } from "react-scroll";
 import { FiMenu, FiX } from "react-icons/fi";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -40,26 +41,28 @@ const Navbar = () => {
   );
 
   return (
-   <nav className="bg-white dark:bg-gray-800 shadow-md fixed top-0 w-full z-50">
+   <nav className="bg-gray-100 dark:bg-gray-800 shadow-md fixed top-0 w-full z-50">
       <div className="flex items-center justify-between px-4 py-3">
       <div className="flex items-center ml-12">
         <img
-          className="w-20 h-14 object-contain"
+          className="md:w-20 md:h-14 w-16 h-10 object-contain"
           src={logo}
           alt="Silpa Das N"
         />
       </div>
-      <ul className="hidden md:flex gap-7 mr-12 text-white">
+      <ul className="hidden md:flex gap-7 mr-12 text-gray-800 dark:text-white">
         {navLinks}
+        <ThemeToggle />
       </ul>
-       <div className="md:hidden text-white text-2xl mr-8" onClick={toggleNav}>
+       <div className="md:hidden dark:text-white text-gray-800 text-2xl mr-8" onClick={toggleNav}>
           {navOpen ? <FiX /> : <FiMenu />}
         </div>
       </div>
 
        {navOpen && (
-        <ul className="flex flex-col items-center gap-6 py-4 text-white bg-gray-800 md:hidden">
+        <ul className="flex flex-col items-center gap-6 py-4 bg-gray-100 text-gray-800 dark:text-white dark:bg-gray-800 md:hidden">
           {navLinks}
+          <ThemeToggle />
         </ul>
       )}
     </nav>

@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
 body::-webkit-scrollbar{
     display: none;
+}
+
+html {
+  transition: background-color 0.3s, color 0.3s;
 }
