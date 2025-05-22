@@ -52,17 +52,19 @@ const Navbar = () => {
       </div>
       <ul className="hidden md:flex gap-7 mr-12 text-gray-800 dark:text-white">
         {navLinks}
-        <ThemeToggle />
       </ul>
-       <div className="md:hidden dark:text-white text-gray-800 text-2xl mr-8" onClick={toggleNav}>
-          {navOpen ? <FiX /> : <FiMenu />}
+       <div className="flex items-center gap-4 mr-8 md:mr-12">
+          <ThemeToggle />
+
+          <div className="md:hidden dark:text-white text-gray-800 text-2xl" onClick={toggleNav}>
+            {navOpen ? <FiX /> : <FiMenu />}
+          </div>
         </div>
       </div>
 
        {navOpen && (
         <ul className="flex flex-col items-center gap-6 py-4 bg-gray-100 text-gray-800 dark:text-white dark:bg-gray-800 md:hidden">
           {navLinks}
-          <ThemeToggle />
         </ul>
       )}
     </nav>
