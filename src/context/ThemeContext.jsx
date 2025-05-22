@@ -21,17 +21,11 @@ export const ThemeProvider = ({ children }) => {
     return 'light';
   });
 
-  // --- MODIFY THIS useEffect HOOK ---
   useEffect(() => {
-    const root = window.document.documentElement; // This is the <html> element
-
-    // Set the data-theme attribute instead of adding/removing classes
+    const root = window.document.documentElement; 
     root.setAttribute('data-theme', theme);
-
-    // Store preference in localStorage
     localStorage.setItem('theme', theme);
   }, [theme]);
-  // --- END MODIFICATION ---
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
