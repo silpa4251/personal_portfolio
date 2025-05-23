@@ -64,16 +64,15 @@ const Skills = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-sm border border-gray-800 shadow-xl">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 dark:bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-sm shadow-xl">
       <div className="max-w-6xl mx-auto">
-        {/* Section heading */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 dark:text-white text-gray-900">
             <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
             My </span>Skills
           </h2>
@@ -91,7 +90,7 @@ const Skills = () => {
               className={`flex items-center px-4 py-2 rounded-lg transition-all duration-300 ${
                 activeCategory === category.id 
                   ? 'bg-gradient-to-r from-violet-500 to-purple-600 text-white' 
-                  : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
+                  : 'bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'
               }`}
             >
               <span className="mr-2">{category.icon}</span>
@@ -118,14 +117,14 @@ const Skills = () => {
               }}
               className="relative"
             >
-              <div className="h-full bg-gray-800 bg-opacity-70 rounded-xl p-5 border border-gray-700 shadow-lg hover:shadow-xl hover:border-violet-500 transition-all duration-300">
+              <div className="h-full bg-blue-50 dark:bg-gray-800 bg-opacity-70 rounded-xl p-5 border border-gray-200 dark:border-gray-700 shadow-md hover:shadow-lg dark:hover:shadow-xl dark:hover:border-violet-500 transition-all duration-300">
                 <div className="flex flex-col items-center justify-center text-center h-full">
                   <div className="text-3xl mb-3">
                     {skill.icon}
                   </div>
         
-                  <h3 className="font-medium mb-2 text-white">{skill.name}</h3>
-                  <p className="text-xs text-gray-400 hidden sm:block">
+                  <h3 className="font-medium mb-2 text-gray-900 dark:text-white">{skill.name}</h3>
+                  <p className="text-xs  text-gray-600 dark:text-gray-400 hidden sm:block">
                     {skill.description}
                   </p>
                 </div>
