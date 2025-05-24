@@ -115,8 +115,8 @@ const Projects = () => {
 
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-r from-slate-900 to-slate-800 text-white py-16 px-4 sm:px-8">
-      <div className="absolute inset-0 overflow-hidden">
+    <section className="relative min-h-screen dark:bg-gradient-to-r from-slate-900 to-slate-800 dark:text-white py-16 px-4 sm:px-8">
+      <div className="absolute overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full">
           <div className="absolute w-full opacity-10">
             <div className="h-screen w-full"
@@ -139,7 +139,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className={`bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-slate-700 transition-all duration-700 hover:shadow-blue-500/20 transform ${
+              className={`bg-gray-200 dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg border border-slate-700 transition-all duration-700 hover:shadow-blue-500/20 transform ${
                 animateCards ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
@@ -157,23 +157,23 @@ const Projects = () => {
               <div className="p-6">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.slice(0, 3).map((tech) => (
-                    <span key={tech} className="flex items-center gap-1 text-xs bg-slate-700 px-2 py-1 rounded">
+                    <span key={tech} className="flex items-center gap-1 text-xs bg-blue-50 dark:bg-slate-700 px-2 py-1 rounded">
                       {techIcons[tech]}
                       <span>{tech}</span>
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="text-xs bg-slate-700 px-2 py-1 rounded">+{project.technologies.length - 3}</span>
+                    <span className="text-xs bg-blue-50 dark:bg-slate-700 px-2 py-1 rounded">+{project.technologies.length - 3}</span>
                   )}
                 </div>
                
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-slate-300 mb-6 line-clamp-2">{project.description}</p>
+                <p className="text-gray-800 dark:text-slate-300 mb-6 line-clamp-2">{project.description}</p>
                
                 <div className="flex justify-between items-center">
                   <button
                     onClick={() => openProjectModal(project)}
-                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                    className="text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 hover:text-blue-500 transition-colors"
                   >
                     View Details
                   </button>
@@ -183,7 +183,7 @@ const Projects = () => {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-slate-400 hover:text-white transition-colors"
+                      className="text-slate-700 dark:text-slate-400 dark:hover:text-white hover:text-slate-500 transition-colors"
                     >
                       <FaGithub size={20} />
                     </a>
@@ -204,9 +204,9 @@ const Projects = () => {
        
         {/* Project modal */}
         {isModalOpen && selectedProject && (
-          <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 mt-16">
+          <div className="fixed inset-0 dark:bg-black bg-opacity-80 z-50 flex items-center justify-center p-4 mt-16">
             <div
-              className="bg-slate-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              className="bg-slate-200 dark:bg-slate-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal header with image */}
@@ -218,7 +218,7 @@ const Projects = () => {
                 />
                 <button
                   onClick={closeProjectModal}
-                  className="absolute top-5 right-3 bg-black bg-opacity-50 text-white rounded-full w-10 h-10 flex justify-center text-3xl hover:bg-opacity-70"
+                  className="absolute top-5 right-3 dark:bg-black bg-opacity-50 bg-gray-200 rounded-full w-10 h-10 flex justify-center text-3xl hover:bg-opacity-70"
                 >
                   ×
                 </button>
@@ -226,18 +226,18 @@ const Projects = () => {
              
               {/* Modal content */}
               <div className="p-6 sm:p-8">
-                <h2 className="text-3xl font-bold mb-4">{selectedProject.title}</h2>
+                <h2 className="text-3xl font-bold mb-4 text-blue-600 dark:text-white">{selectedProject.title}</h2>
                
-                <p className="text-slate-300 mb-6">{selectedProject.fullDescription}</p>
+                <p className="text-gray-800 dark:text-slate-300 mb-6">{selectedProject.fullDescription}</p>
                
                 {/* Technologies */}
                 <div className="mb-6">
-                  <h3 className="text-xl font-semibold mb-3 text-blue-400">Technologies Used</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">Technologies Used</h3>
                   <div className="flex flex-wrap gap-3">
                     {selectedProject.technologies.map((tech) => (
                       <div
                         key={tech}
-                        className="flex items-center gap-2 p-2 bg-slate-800 rounded"
+                        className="flex items-center gap-2 p-2 bg-blue-50 dark:bg-slate-800 rounded"
                       >
                         <span className="text-xl">{techIcons[tech]}</span>
                         <span>{tech.charAt(0).toUpperCase() + tech.slice(1)}</span>
@@ -248,11 +248,11 @@ const Projects = () => {
                
                 {/* Features */}
                 <div className="mb-8">
-                  <h3 className="text-xl font-semibold mb-3 text-blue-400">Key Features</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-blue-500 dark:text-blue-400">Key Features</h3>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
                     {selectedProject.features.map((feature, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="text-blue-400 mr-2">•</span>
+                        <span className="text-blue-500 dark:text-blue-400 mr-2">•</span>
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -273,7 +273,7 @@ const Projects = () => {
                     href={selectedProject.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded flex items-center justify-center gap-2 transition-colors"
+                    className="bg-gradient-to-r from-blue-500 to-violet-600 dark:bg-slate-700 dark:hover:bg-slate-600 hover:shadow-violet-500/30 text-white px-6 py-3 rounded flex items-center justify-center gap-2 transition-colors"
                   >
                     <FaGithub /> View Source Code
                   </a>

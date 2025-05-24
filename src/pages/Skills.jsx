@@ -64,7 +64,7 @@ const Skills = () => {
   };
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 dark:bg-gray-900 bg-opacity-50 backdrop-filter backdrop-blur-sm shadow-xl">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 dark:bg-gray-900 bg-opacity-50">
       <div className="max-w-6xl mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: -20 }}
