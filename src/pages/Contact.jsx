@@ -209,7 +209,7 @@ const Contact = () => {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="p-6 bg-green-900 bg-opacity-20 border border-green-800 rounded-lg text-center"
+                  className="p-6 bg-green-200 dark:bg-green-900 bg-opacity-20 border border-green-800 rounded-lg text-center"
                 >
                   <svg
                     className="w-16 h-16 text-green-500 mx-auto mb-4"
@@ -224,10 +224,10 @@ const Contact = () => {
                       d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  <h3 className="text-xl font-medium text-green-400 mb-2">
+                  <h3 className="text-xl font-medium text-green-600 dark:text-green-400 mb-2">
                     Message Sent!
                   </h3>
-                  <p className="text-gray-300">{formStatus.message}</p>
+                  <p className="text-gray-500 dark:text-gray-300">{formStatus.message}</p>
                   <button
                     onClick={() =>
                       setFormStatus({
@@ -236,7 +236,7 @@ const Contact = () => {
                         message: "",
                       })
                     }
-                    className="mt-4 px-6 py-2 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
+                    className="mt-4 px-6 py-2 bg-white dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors"
                   >
                     Send Another Message
                   </button>
